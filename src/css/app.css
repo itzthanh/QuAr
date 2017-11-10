@@ -1,0 +1,248 @@
+/*app.css*/
+.app{	
+	/*background: #000000;*/
+	background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color:white;
+	position: relative;
+	padding-top: 50px;
+}
+
+.app-title{
+	text-align: center;
+}
+
+.search-bar{
+	width:50%;
+	margin:0 auto;
+}
+
+.search-error, .search-error:focus{
+	border:1px solid red;
+	-moz-box-shadow: 0 0 2px red;
+    -webkit-box-shadow: 0 0 2px red;
+    box-shadow: 0 0 2px red;
+}
+
+.error-msg{
+	text-align:center;
+	color:#ff8080;
+}
+
+.search-button:hover{
+	cursor: pointer;
+}
+
+/*Profile*/
+.artist-section{
+	border:1px solid white;
+	border-radius:10px;
+	padding-bottom:20px;
+	margin-top:50px;
+}
+
+.artist-header{
+	margin:15px;
+}
+
+.artist-header > .artist-name, 
+.artist-header > .artist-genres{
+	display:inline;
+}
+
+.artist-name{
+	color: #ffffb3;
+}
+
+.artist-followers{
+	margin-top:0;
+}
+
+.artist-img-wrapper{
+	margin-right: 0px;
+}
+
+.artist-img{
+	margin:20px auto;
+	width: 240px;
+	height: 240px;
+	object-fit: cover;
+	border:2px solid white;
+	border-radius: 120px;
+}
+
+/*Tracks*/
+.tracks-wrapper{
+	padding:0;
+}
+
+.tracks-row{
+	text-align: center;
+}
+
+.track-img-wrapper{
+	display: inline-block;
+	margin-left:13px;
+	margin-right:10px;
+	margin-top:7px;
+	margin-bottom:7px;
+	padding:0;
+	text-align: center;
+	position: relative;
+}
+
+.play-track-wrapper{
+	position: absolute;
+	bottom:0;
+	top:0;
+	margin: auto;
+	height:100%;
+	width:100%;
+}
+
+.play-track{
+	position: absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	margin:auto;
+	padding-left: 5px;
+	padding-top:6px;
+	text-align: center;
+	font-size: 25px;
+	border-radius:22.5px;
+	background-color: black;
+	width:45px;
+	height:45px;
+	color:white;
+	opacity:0;
+}
+
+.play-track:hover{
+	opacity: 0.8;
+	cursor:pointer;
+	-webkit-animation: 0.3s linear fadein-play-button;
+}
+
+@-webkit-keyframes fadein-play-button{
+	from {
+		opacity: 0;
+	} to {
+		opacity: 0.8;
+	}
+}
+
+@keyframes fadein-play-button{
+	from {
+		opacity: 0;
+	} to {
+		opacity: 0.8;
+	}
+}
+
+.pause{
+	padding-right: 5px;
+}
+
+.track-img{
+	width:100%;
+	max-height:110px;
+	object-fit: cover;
+	border:1px solid white;
+}
+
+.track-name{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color:white;
+	background:black;
+	opacity:0.7;
+}
+
+/*Footer*/
+.footer{
+	width:100%;
+	margin-top: 50px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	border-top:1px solid white;
+}
+
+.social-media{
+	margin: 10px 0px;
+	text-align: center;
+}
+
+.social-media-icon .icon{
+	height:50px;
+}
+
+.icon:hover {
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	transform: rotate(360deg);
+	transition:0.7s;
+	transition-timing-function: ease-out;
+	text-decoration: none;
+    opacity: 0.7;
+}
+
+.social-media > .col-xs-1:nth-of-type(1){
+	margin-right: 4.15%;
+}
+
+.contact-info p{
+	margin: 0;
+}
+
+.contact-info > .col-sm-4:nth-of-type(1){
+	border-right:1px solid white;
+	padding-right: 10px;
+}
+
+/*Temp fix for tablet track image display*/
+@media screen and (max-width: 767px){
+
+}
+
+/*Specific styling and formatting in addition to Bootstrap*/
+@media screen and (max-width: 768px){
+	.app{
+		padding-top:0px;
+	}
+	.search-bar{
+		width:90%;
+	}
+	.artist-section-wrapper{
+		padding:0;
+	}
+	.artist-section{
+		border:none;
+	}
+	.artist-img, .artist-followers{
+		text-align: center;
+		margin:0 auto;
+	}
+	.artist-img{
+		margin:15px auto;
+	}
+	.contact-info > .col-sm-4:nth-of-type(1){
+		border:none;
+	}
+}
+
+@media screen and (min-width: 1440px){
+	.social-media{
+		padding-left: 7.6%;
+	}
+	.artist-section-wrapper{
+		padding:0 100px;
+	}
+	.footer{
+		margin-top: 100px;
+	}
+}
